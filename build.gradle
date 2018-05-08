@@ -1,0 +1,75 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+
+
+
+    defaultConfig {
+        applicationId "com.example.liuwei20180504"
+        minSdkVersion 16
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    compile 'com.android.support:recyclerview-v7:26.1.0'
+    compile 'de.hdodenhof:circleimageview:2.2.0'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.squareup.okhttp3:okhttp:3.10.0'
+
+    // 一般依赖：
+    compile 'com.facebook.fresco:fresco:0.14.1'
+
+// 如果需要支持gif，再添加：
+    compile 'com.facebook.fresco:animated-gif:0.12.0'
+
+// 在 API < 14 上的机器支持 WebP 时，需要添加
+    compile 'com.facebook.fresco:animated-base-support:0.12.0'
+
+    // 支持 WebP （静态图+动图），需要添加
+    compile 'com.facebook.fresco:animated-webp:0.12.0'
+    compile 'com.facebook.fresco:webpsupport:0.12.0'
+
+    // 仅支持 WebP 静态图，需要添加
+    compile 'com.facebook.fresco:webpsupport:0.12.0'
+
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.10.0'
+
+    compile 'org.greenrobot:eventbus:3.0.0'
+
+    compile 'com.jakewharton:butterknife:8.5.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
+
+    compile 'com.youth.banner:banner:1.4.9'
+    compile 'com.github.userswlwork:pull-to-refresh:1.0.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.4.0'
+
+    compile 'io.reactivex.rxjava2:rxjava:2.0.1'
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'   //RXjava2.0版本
+    compile 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'  //rxjava2 retrofit2
+
+    compile 'com.fynn.fluidlayout:fluidlayout:1.0'
+}
